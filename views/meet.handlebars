@@ -1,0 +1,104 @@
+<div class="container">
+  <div id="header">
+  </div>
+    <h1 id="meetName"></h1>
+</div>
+<div class="container">
+    <div id="host"></div>
+    <span id="added-alert" class="alert" style="display: none">*** Entry Added ***</span>
+    {{!-- <span id="updated-alert" class="alert" style="display: none">*** Entry Deleted ***</span> --}}
+    <input type="button" name="showAddFormBtn" id="showAddFormBtn" value="Add New Entry" style="display:inline-block" />
+    <div id="addFormContainer" class="subContainer startHidden">
+      <form method='post'>
+          <fieldset>
+              <legend>
+                  Add Meet Entry
+              </legend>
+
+              <div class="form-row">
+                  <label for="lifter">Select Lifter</label>
+                  <select id="lifter-select" name="lifter-select" required >
+                  </select><span id="lifter-required" class="alert" style="display: none">* Lifter Required</span>
+              </div>
+
+              <div class="form-row">
+                  <label for="bench">Opening Bench (lb)</label>
+                  <input type="number" name="bench" id="bench" required min="45" step="5"/>
+                  <span id="bench-required" class="alert" style="display: none">* Required</span>
+              </div>
+
+              <div class="form-row">
+                  <label for="clean">Opening Clean (lb)</label>
+                  <input type="number" name="clean" id="clean" required min="45" step="5"/>
+                  <span id="clean-required" class="alert" style="display: none">* Required</span>
+              </div>
+
+              <div class="form-row">
+                  <label for="squat">Opening Squat (lb)</label>
+                  <input type="number" name="squat" id="squat" required min="45" step="5"/>
+                  <span id="squat-required" class="alert" style="display: none">* Required</span>
+              </div>
+
+              <div class="form-row">
+                  <input type="submit" id="submitAddNewBtn" name="submitAddNewBtn" value="Save" />
+                  <input type="button" id="cancelAddNewBtn" name="cancelAddNewBtn" value="Cancel" />
+              </div>
+          </fieldset>
+      </form>
+    </div>
+    {{!-- <div id="editFormContainer" class="subContainer" style="display: none">
+      <form method='post'>
+        <fieldset>
+          <legend>
+              Edit Entry
+          </legend>
+          <div><input type="hidden" name="id" id="edit-id" /></div>
+
+          <div id="Lifter Name"></div>
+          <div class="form-row">
+              <label for="edit-bench">Opening Bench (lb)</label>
+              <input type="number" name="edit-bench" id="edit-bench" required min="45" step="5"/>
+              <span id="edit-bench-required" class="alert" style="display: none">* Required</span>
+          </div>
+
+          <div class="form-row">
+              <label for="edit-clean">Opening Clean (lb)</label>
+              <input type="number" name="edit-clean" id="edit-clean" required min="45" step="5"/>
+              <span id="edit-clean-required" class="alert" style="display: none">* Required</span>
+          </div>
+
+          <div class="form-row">
+              <label for="edit-squat">Opening Squat (lb)</label>
+              <input type="number" name="edit-squat" id="edit-squat" required min="45" step="5"/>
+              <span id="edit-squat-required" class="alert" style="display: none">* Required</span>
+          </div>
+
+          <div class="form-row">
+              <input type="submit" id="submitEditBtn" name="submitEditBtn" value="Save" />
+              <input type="button" id="cancelEditBtn" name="cancelEditBtn" value="Cancel" />
+          </div>
+
+        </fieldset>
+    </form>
+  </div> --}}
+  <div class="subcontainer">
+    <table id="table">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Entry Weight</th>
+            <th>Gender</th>
+            <th>Opening Bench</th>
+            <th>Opening Clean</th>
+            <th>Opening Squat</th>
+            {{!-- <th>Modify</th> --}}
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script src="/js/util.js"></script>
+<script src="/js/meet.js"></script>

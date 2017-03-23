@@ -1,0 +1,92 @@
+<div class="container">
+  <div id="header">
+  </div>
+    <h1 id="teamName"></h1>
+</div>
+
+<div class="container">
+    <h2>Coaches</h2>
+    <span id="added-alert" class="alert" style="display: none">*** Coach Added ***</span><span id="updated-alert" class="alert" style="display: none">*** Coach Updated ***</span>
+    <input type="button" name="showAddFormBtn" id="showAddFormBtn" value="Add New Coach" style="display:inline-block" />
+    <div id="addFormContainer" class="subContainer startHidden">
+      <form method='post'>
+          <fieldset>
+              <legend>
+                  Add New Coach
+              </legend>
+
+              <div class="form-row">
+                  <label for="firstName">Coach's First Name</label>
+                  <input type="text" name="first-name" id="first-name" required />
+                  <span id="first-name-required" class="alert" style="display: none">* First Name Required</span>
+              </div>
+              <div class="form-row">
+                  <label for="lastName">Coach's Last Name</label>
+                  <input type="text" name="last-name" id="last-name" required />
+                  <span id="last-name-required" class="alert" style="display: none">* Last Name Required</span>
+              </div>
+              <div class="form-row">
+                  <input type="submit" id="submitAddNewBtn" name="submitAddNewBtn" value="Save" />
+                  <input type="button" id="cancelAddNewBtn" name="cancelAddNewBtn" value="Cancel" />
+              </div>
+          </fieldset>
+      </form>
+    </div>
+    <div id="editFormContainer" class="subContainer" style="display: none">
+      <form method='post'>
+        <fieldset>
+          <legend>
+              Edit Coach
+          </legend>
+          <div><input type="hidden" name="id" id="edit-id" /></div>
+          <div><input type="hidden" name="team-id" id="edit-team-id" /></div>
+          <div class="form-row">
+              <label for="edit-first-name">Coach's First Name</label>
+              <input type="text" name="edit-first-name" id="edit-first-name" required />
+              <span id="edit-first-name-required" class="alert" style="display: none">* First Name Required</span>
+          </div>
+          <div class="form-row">
+              <label for="edit-last-name">Coach's Last Name</label>
+              <input type="text" name="edit-last-name" id="edit-last-name" required />
+              <span id="edit-last-name-required" class="alert" style="display: none">* Last Name Required</span>
+          </div>
+
+          <div class="form-row">
+              <input type="submit" id="submitEditBtn" name="submitEditBtn" value="Save" />
+              <input type="button" id="cancelEditBtn" name="cancelEditBtn" value="Cancel" />
+          </div>
+        </fieldset>
+    </form>
+  </div>
+  <div class="subcontainer">
+    <table id="table">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Modify</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+    <h2>Lifters</h2>
+    <input type="button" name="addLifter" id="addLifter" value="Add Lifter" style="display:inline-block" />
+  <div class="subcontainer">
+    <table id="lifter-table">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            {{!-- <th>Modify</th> --}}
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script src="/js/util.js"></script>
+<script src="/js/team.js"></script>

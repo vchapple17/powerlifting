@@ -1,0 +1,76 @@
+<div class="container">
+  <div id="header">
+  </div>
+    <h1>Team Tab</h1>
+</div>
+<div class="container">
+    <label>Search Team Names</label>
+    <input type="text" name="name" id="search" />
+    <input type="button" name="searchSubmit" id="searchSubmit" value="Search" />
+</div>
+<div class="container">
+  Click on a team's name to see list of coaches and lifters.
+</div>
+<div class="container">
+    <span id="added-alert" class="alert" style="display: none">*** Team Added ***</span><span id="updated-alert" class="alert" style="display: none">*** Team Updated ***</span>
+    <input type="button" name="showAddFormBtn" id="showAddFormBtn" value="Add New Team" style="display:inline-block" />
+
+    <div id="addFormContainer" class="subContainer startHidden">
+        <form method='post'>
+            <fieldset>
+                <legend>
+                    Add New Team
+                </legend>
+                <div class="form-row">
+                    <label for="name">Team Name</label>
+                    <input type="text" name="name" id="name" required />
+                    <span id="name-required" class="alert" style="display: none">* Name Required</span>
+                </div>
+                <div class="form-row">
+                    <label for="mascot">Mascot Name</label>
+                    <input type="text" name="mascot" id="mascot" />
+                </div>
+                <div class="form-row">
+                    <input type="submit" id="submitAddNewBtn" name="submitAddNewBtn" value="Save" />
+                    <input type="button" id="cancelAddNewBtn" name="cancelAddNewBtn" value="Cancel" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div id="editFormContainer" class="subContainer" style="display: none">
+        <form method='post'>
+            <fieldset>
+                <legend>
+                    Edit Team
+                </legend>
+                <div><input type="hidden" name="id" id="edit-id" /></div>
+                <div class="form-row">
+                    <label for="edit-name">Team Name</label>
+                    <input type="text" name="name" id="edit-name" required />
+                    <span id="edit-name-required" class="alert" style="display: none">* Name Required</span>
+                </div>
+                <div class="form-row">
+                    <label for="edit-mascot">Mascot Name</label>
+                    <input type="text" name="mascot" id="edit-mascot" />
+                </div>
+                <div class="form-row">
+                    <input type="submit" id="submitEditBtn" name="submitEditBtn" value="Save" />
+                    <input type="button" id="cancelEditBtn" name="cancelEditBtn" value="Cancel" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <table id="table">
+        <thead>
+            <th>Name</th>
+            <th>Mascot</th>
+            <th>Modify</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<script src="/js/util.js"></script>
+<script src="/js/teamtab.js"></script>

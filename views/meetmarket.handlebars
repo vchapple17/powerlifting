@@ -1,0 +1,115 @@
+<div class="container">
+  <div id="header">
+  </div>
+  <h1>Meet Market</h1>
+</div>
+
+<div class="container">
+    <span id="added-alert" class="alert" style="display: none">*** Meet Added ***</span><span id="updated-alert" class="alert" style="display: none">*** Meet Updated ***</span>
+    <input type="button" name="showAddFormBtn" id="showAddFormBtn" value="Add New Meet" style="display:inline-block" />
+
+    <div id="addFormContainer" class="subContainer startHidden">
+        <form method='post'>
+            <fieldset>
+                <legend>
+                    Add New Meet
+                </legend>
+
+                <div class="form-row">
+                    <label for="name">Meet Name</label>
+                    <input type="text" name="name" id="name" required />
+                    <span id="name-required" class="alert" style="display: none">* Name Required</span>
+                </div>
+
+                <div class="form-row">
+                    <label for="team">Host Team</label>
+                    <select id="team-select" name="team-select">
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" />
+                </div>
+
+                <div class="form-row">
+                    <label for="state">State</label>
+                    <select id="state-select" name="state-select">
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="zip">Zip</label>
+                    <input type="number" min="0" max="99999" step="1" name="zip" id="zip" />
+                </div>
+
+                <div class="form-row">
+                    <input type="submit" id="submitAddNewBtn" name="submitAddNewBtn" value="Save" />
+                    <input type="button" id="cancelAddNewBtn" name="cancelAddNewBtn" value="Cancel" />
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    {{!-- <div id="editFormContainer" class="subContainer" style="display: none">
+        <form method='post'>
+            <fieldset>
+                <legend>
+                    Edit Meet
+                </legend>
+                <div><input type="hidden" name="id" id="edit-id" /></div>
+
+                <div class="form-row">
+                    <label for="edit-ame">Meet Name</label>
+                    <input type="text" name="edit-name" id="edit-name" required />
+                    <span id="edit-name-required" class="alert" style="display: none">* Name Required</span>
+                </div>
+
+                <div class="form-row">
+                    <label for="edit-team">Host Team</label>
+                    <select id="edit-team-select" name="edit-team-select">
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="edit-city">City</label>
+                    <input type="text" name="edit-city" id="edit-city" />
+                </div>
+
+                <div class="form-row">
+                    <label for="edit-state">State</label>
+                    <select id="edit-state-select" name="edit-state-select">
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="edit-zip">Zip</label>
+                    <input type="number" min="0" max="99999" step="1" name="edit-zip" id="edit-zip" />
+                </div>
+
+
+                <div class="form-row">
+                    <input type="submit" id="submitEditBtn" name="submitEditBtn" value="Save" />
+                    <input type="button" id="cancelEditBtn" name="cancelEditBtn" value="Cancel" />
+                </div>
+            </fieldset>
+        </form>
+    </div> --}}
+</div>
+<div class="container">
+    <table id="table">
+        <thead>
+            <th>Name</th>
+            <th>Host Team</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Modify</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="/js/util.js"></script>
+<script src="/js/meetmarket.js"></script>

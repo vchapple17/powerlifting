@@ -1,0 +1,55 @@
+.form-row {
+  margin: 10px;
+}
+
+.alert {
+  color: red;
+  text-align: center;
+  background-color: aqua;
+  display: none;
+  padding: 5px;
+}
+
+.container {
+  margin: 30px;
+  display: block;
+}
+
+.subContainer {
+  margin: 10px;
+  display: block;
+}
+
+table, td, th {
+  border: 2px solid black;
+  text-align: center;
+}
+
+td, th {
+  width: 150px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.startHidden {
+  display: none;
+}
+
+#editForm {
+  color: blue;
+}
+
+input[type="radio"] {
+  margin-left: 15px;
+  margin-right: 8px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+table {
+  margin-top: 8px;
+}

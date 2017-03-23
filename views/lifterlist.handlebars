@@ -1,0 +1,139 @@
+<div class="container">
+  <div id="header">
+  </div>
+  <h1>Lifter List</h1>
+</div>
+
+<div class="container">
+  <span id="added-alert" class="alert" style="display: none">*** Lifter Added ***</span><span id="updated-alert" class="alert" style="display: none">*** Lifter Updated ***</span>
+  <input type="button" name="showAddFormBtn" id="showAddFormBtn" value="Add New Lifter" style="display:inline-block"/>
+
+  <div id="addFormContainer" class="subContainer startHidden">
+  <form method='post'>
+    <fieldset>
+      <legend>
+        Add New Lifter
+      </legend>
+
+      <div class="form-row">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" required />
+        <span id="first-name-required" class="alert" style="display: none">* First Name Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" required />
+        <span id="last-name-required" class="alert" style="display: none">* Last Name Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender-radio" value="female"/>Female
+        <input type="radio" name="gender-radio" value="male"/>Male
+        <span id="gender-required" class="alert" style="display: none">* Gender Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="weight">Weight</label>
+        <input type="number" min="0" max="1000" name="weight" id="weight" required />
+        <span id="weight-required" class="alert" style="display: none">* Weight Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="grade">Grade Level</label>
+        <input type="radio" name="grade-radio" value="9th" />9th
+        <input type="radio" name="grade-radio" value="10th"/>10th
+        <input type="radio" name="grade-radio" value="11th"/>11th
+        <input type="radio" name="grade-radio" value="12th"/>12th
+        <span id="grade-required" class="alert" style="display: none">* Weight Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="team-select">Team</label>
+        <select id="team-select" name="team-select">
+        </select>
+      </div>
+
+      <div class="form-row">
+        <input type="submit" id="submitAddNewBtn" name="submitAddNewBtn" value="Save" />
+        <input type="button" id="cancelAddNewBtn" name="cancelAddNewBtn" value="Cancel" />
+      </div>
+    </fieldset>
+  </form>
+  </div>
+  <div id="editFormContainer" class="subContainer" style="display: none">
+  <form method='post'>
+    <fieldset>
+      <legend>
+        Edit Lifter
+      </legend>
+      <div><input type="hidden" name="edit-id" id="edit-id"/></div>
+      {{!-- <div><input type="hidden" name="edit-team-id" id="edit-team-id"/></div> --}}
+      <div class="form-row">
+        <label for="edit-firstName">First Name</label>
+        <input type="text" name="edit-firstName" id="edit-firstName" required />
+        <span id="edit-first-name-required" class="alert" style="display: none">* First Name Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="edit-lastName">Last Name</label>
+        <input type="text" name="edit-lastName" id="edit-lastName" required />
+        <span id="edit-last-name-required" class="alert" style="display: none">* Last Name Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="edit-gender-radio">Gender</label>
+        <input type="radio" name="edit-gender-radio" value="female"/>Female
+        <input type="radio" name="edit-gender-radio" value="male"/>Male
+        <span id="gender-required" class="alert" style="display: none">* Gender Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="edit-weight">Weight</label>
+        <input type="text" name="edit-weight" id="edit-weight" required />
+        <span id="edit-weight-required" class="alert" style="display: none">* Weight Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="edit-grade-radio">Grade Level</label>
+        <input type="radio" name="edit-grade-radio" value="9th" />9th
+        <input type="radio" name="edit-grade-radio" value="10th"/>10th
+        <input type="radio" name="edit-grade-radio" value="11th"/>11th
+        <input type="radio" name="edit-grade-radio" value="12th"/>12th
+        <span id="grade-required" class="alert" style="display: none">* Weight Required</span>
+      </div>
+
+      <div class="form-row">
+        <label for="edit-team-select">Team</label>
+        <select id="edit-team-select" name="edit-team-select">
+        </select>
+      </div>
+
+      <div class="form-row">
+        <input type="submit" id="submitEditBtn" name="submitEditBtn" value="Save" />
+        <input type="button" id="cancelEditBtn" name="cancelEditBtn" value="Cancel" />
+      </div>
+    </fieldset>
+  </form>
+  </div>
+
+</div>
+
+<div class="container">
+  <table id="table">
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Weight (lb)</th>
+      <th>Grade</th>
+      <th>Team</th>
+      <th>Modify</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+<script src="/js/util.js"></script>
+<script src="/js/lifterlist.js"></script>
